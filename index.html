@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0d10" />
+  <title>iPhone 18 Pro Camera Field Guide</title>
+  <style>
+    :root{
+      --bg:#0b0d10;--card:#141820;--card2:#1b2029;--text:#f5f7fa;--muted:#aab2bf;
+      --line:#2a313d;--accent:#8ad6ff;--accent2:#c6ffb2;--warm:#ffd59e;--danger:#ffb0b0;
+      --max:1080px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(180deg,#090b0e,#0e1218 36%,#0b0d10);color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif;line-height:1.7}
+    a{color:var(--accent)}
+    .wrap{width:min(var(--max),calc(100% - 32px));margin:auto}
+    header{padding:72px 0 36px}
+    .eyebrow{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+    h1{font-size:clamp(2.25rem,7vw,5rem);line-height:1.02;margin:.28em 0 .3em;letter-spacing:-.04em}
+    .lead{font-size:clamp(1.02rem,2.4vw,1.28rem);max-width:760px;color:#d8dee8}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+    .chip{border:1px solid var(--line);background:#12161d;border-radius:999px;padding:7px 11px;font-size:.86rem;color:#dbe2eb}
+    nav{position:sticky;top:0;z-index:20;background:rgba(11,13,16,.86);backdrop-filter:blur(18px);border-block:1px solid rgba(255,255,255,.06)}
+    nav .wrap{display:flex;gap:18px;overflow-x:auto;white-space:nowrap;padding-block:12px}
+    nav a{text-decoration:none;color:#dfe6ef;font-size:.9rem}
+    section{padding:38px 0}
+    h2{font-size:clamp(1.55rem,4vw,2.3rem);letter-spacing:-.025em;margin:0 0 16px}
+    h3{margin:.2em 0 .45em;font-size:1.12rem}
+    p{margin:.4em 0 1em}
+    .muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    .card{background:linear-gradient(180deg,var(--card),#11151c);border:1px solid var(--line);border-radius:22px;padding:20px}
+    .card.soft{background:linear-gradient(180deg,#17201a,#111714)}
+    .span-12{grid-column:span 12}.span-8{grid-column:span 8}.span-6{grid-column:span 6}.span-4{grid-column:span 4}
+    .big-number{font-size:2rem;font-weight:800;letter-spacing:-.04em}
+    .key{display:inline-block;padding:2px 8px;border-radius:8px;background:#242b35;border:1px solid #343d49;font-size:.82rem}
+    .good{color:var(--accent2)}.warm{color:var(--warm)}.danger{color:var(--danger)}
+    ul{padding-left:1.1em} li{margin:.38em 0}
+    table{width:100%;border-collapse:collapse;font-size:.94rem}
+    th,td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+    th{color:#dce4ef;font-size:.83rem}
+    .scene{position:relative;overflow:hidden}
+    .scene:before{content:"";position:absolute;width:140px;height:140px;border-radius:50%;right:-70px;top:-70px;background:radial-gradient(circle,rgba(138,214,255,.18),transparent 70%)}
+    .label{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+    .scene .setting{display:grid;grid-template-columns:86px 1fr;gap:6px 12px;margin-top:14px;font-size:.92rem}
+    .scene .setting b{color:#f7f9fc}.scene .setting span{color:#c5ccd7}
+    .note{border-left:3px solid var(--accent);padding:10px 14px;background:#101820;border-radius:0 12px 12px 0}
+    .warn{border-left-color:var(--warm);background:#1b1711}
+    details{background:#11151c;border:1px solid var(--line);border-radius:16px;padding:13px 15px;margin:10px 0}
+    summary{cursor:pointer;font-weight:700}
+    .footer{padding:46px 0 70px;color:var(--muted);font-size:.88rem}
+    .mini{font-size:.86rem}
+    @media(max-width:760px){
+      header{padding-top:54px}
+      .span-8,.span-6,.span-4{grid-column:span 12}
+      .card{padding:17px;border-radius:18px}
+      .scene .setting{grid-template-columns:76px 1fr}
+      th,td{padding:10px 7px}
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="eyebrow">Travel-first camera guide</div>
+    <h1>iPhone 18 Pro<br>Camera Field Guide</h1>
+    <p class="lead">iPhone 14から乗り換えた人向け。機能を全部覚えるのではなく、<b>「場面 → レンズ → 画質 → 必要なら1つだけ手動調整」</b>の順で迷わず撮るための実戦ガイド。</p>
+    <div class="chips">
+      <span class="chip">海外旅行</span><span class="chip">街歩き</span><span class="chip">絶景</span>
+      <span class="chip">夜景</span><span class="chip">カフェ・料理</span><span class="chip">人物</span><span class="chip">動画・Reels</span>
+    </div>
+  </header>
+
+  <nav><div class="wrap">
+    <a href="#quick">まずこれ</a><a href="#lens">レンズ</a><a href="#scenes">場面別</a>
+    <a href="#manual">手動操作</a><a href="#video">動画</a><a href="#14to18">14→18 Pro</a><a href="#travel">旅の型</a>
+  </div></nav>
+
+  <main>
+    <section id="quick" class="wrap">
+      <h2>まずこれだけ。普段はAutoでいい</h2>
+      <div class="grid">
+        <div class="card span-4 soft"><div class="label">Default photo</div><div class="big-number">24 MP</div><p>普段の写真はこれ。画質・処理速度・容量のバランスが良い。</p></div>
+        <div class="card span-4"><div class="label">Default video</div><div class="big-number">4K / 30</div><p>旅行Vlog、日常、SNSの基準。動きが激しい時だけ60fpsへ。</p></div>
+        <div class="card span-4"><div class="label">Rule</div><div class="big-number">1 adjustment</div><p>迷ったら手動で触るのは露出だけ。空や照明が白く飛ぶ時は少し暗くする。</p></div>
+      </div>
+
+      <div class="card" style="margin-top:14px">
+        <h3>おすすめの基本設定</h3>
+        <table>
+          <tr><th>項目</th><th>おすすめ</th><th>理由</th></tr>
+          <tr><td>フォーマット</td><td><b>高効率</b></td><td>HEIF / HEVCで画質と容量効率を両立。</td></tr>
+          <tr><td>写真モード</td><td><b>24MP</b></td><td>日常・旅行の標準。48MPは必要な場面だけ。</td></tr>
+          <tr><td>ビデオ</td><td><b>4K / 30fps</b></td><td>画質・暗所・容量・編集のバランスが良い。</td></tr>
+          <tr><td>シネマティック</td><td><b>4K / 30fps</b></td><td>人物・印象的なカット用。</td></tr>
+          <tr><td>Apple ProRes</td><td><b>OFF</b></td><td>普段の旅行には容量が重すぎる。カラーグレーディング時だけON。</td></tr>
+          <tr><td>グリッド / 水平</td><td><b>ON</b></td><td>建築・海・テーブル撮影で傾きを防ぐ。</td></tr>
+          <tr><td>レンズ補正</td><td><b>ON</b></td><td>超広角や前面カメラの歪みを自然に補正。</td></tr>
+          <tr><td>マクロ撮影コントロール</td><td><b>ON</b></td><td>近づいた時の自動マクロ切替を自分で制御できる。</td></tr>
+          <tr><td>より速い撮影を優先</td><td><b>ON</b></td><td>旅行では最高画質の理論値より「瞬間を逃さない」を優先。</td></tr>
+        </table>
+      </div>
+
+      <p class="note"><b>覚え方：</b>「24MP + 4K30 + Auto」がホームポジション。そこから場面に応じて<b>倍率、48MP、露出</b>のどれかを変える。</p>
+    </section>
+
+    <section id="lens" class="wrap">
+      <h2>レンズは「距離感」で選ぶ</h2>
+      <p class="muted">ピンチズームを細かく動かすより、まずは 0.5 / 1 / 2 / 4 / 8 の定位置から選ぶと失敗しにくい。</p>
+      <div class="grid">
+        <div class="card span-4"><div class="label">0.5× · 13mm</div><h3>超広角</h3><p>絶景、巨大建築、狭い室内。「広さ」を見せたい時。</p><p class="mini warm">人物を画面端に置くと歪みやすい。</p></div>
+        <div class="card span-4 soft"><div class="label">1× · 24 / 28 / 35mm</div><h3>メイン</h3><p>画質優先の主役。24mm=広め、28mm=自然、35mm=写真らしい切り取り。</p><p class="mini good">迷ったらここ。</p></div>
+        <div class="card span-4"><div class="label">2× · 48mm</div><h3>標準寄り望遠</h3><p>料理、人物、街のディテール。余計な背景を減らしやすい。</p></div>
+        <div class="card span-6"><div class="label">4× · 100mm</div><h3>48MP望遠</h3><p>人物、建物の一部、山、圧縮感のある写真。iPhone 14ではできなかった「遠くをきれいに切り取る」領域。</p></div>
+        <div class="card span-6"><div class="label">8× · 200mm</div><h3>光学品質の超望遠</h3><p>遠景、塔、山の稜線、ステージ。明るい屋外ほど強い。暗所では1×や4×を優先。</p></div>
+      </div>
+      <p class="note"><b>24 / 28 / 35mm：</b>1×ボタンをタップして切り替え。街歩きは28mm、カフェやスナップは35mmを試すと「スマホっぽい広角感」が減る。</p>
+    </section>
+
+    <section id="scenes" class="wrap">
+      <h2>場面から選ぶ。旅行用レシピ</h2>
+      <div class="grid">
+        <div class="card scene span-6">
+          <div class="label">City / Architecture</div><h3>🏙 街並み・建築</h3>
+          <div class="setting"><b>レンズ</b><span>1× 24mm / 28mm。大きな建物は0.5×</span><b>画質</b><span>24MP。明るく静止した景色はHEIF 48MP</span><b>手動</b><span>基本Auto。必要なら露出 -0.3程度</span><b>コツ</b><span>グリッド＋水平。垂直線が倒れすぎない位置から撮る</span></div>
+        </div>
+
+        <div class="card scene span-6">
+          <div class="label">Landscape</div><h3>🌄 絶景・自然</h3>
+          <div class="setting"><b>レンズ</b><span>1×を基準。広がりは0.5×、山の層は4×</span><b>画質</b><span>24MP / 明るい時は48MP</span><b>手動</b><span>空が白飛びする時だけ露出を少し下げる</span><b>コツ</b><span>「全部入れる」より前景を1つ置くと奥行きが出る</span></div>
+        </div>
+
+        <div class="card scene span-6">
+          <div class="label">Food / Cafe</div><h3>🍜 料理・カフェ</h3>
+          <div class="setting"><b>レンズ</b><span>35mm または2×。真上撮りは1×</span><b>画質</b><span>24MP</span><b>手動</b><span>基本Auto。明るすぎるテーブルは露出を少し下げる</span><b>コツ</b><span>0.5×で料理に近づきすぎない。2×で少し離れると自然</span></div>
+        </div>
+
+        <div class="card scene span-6">
+          <div class="label">Portrait</div><h3>🧑 人物・友達</h3>
+          <div class="setting"><b>レンズ</b><span>2× or 4×。全身＋景色なら1×/35mm</span><b>画質</b><span>24MP</span><b>モード</b><span>まず「写真」で撮る。深度情報があれば後からポートレート化</span><b>コツ</b><span>顔を0.5×の端に置かない。背景との距離を取る</span></div>
+        </div>
+
+        <div class="card scene span-6">
+          <div class="label">Night</div><h3>🌃 夜景・夜市</h3>
+          <div class="setting"><b>レンズ</b><span>1×最優先。明るい被写体なら2×/4×</span><b>画質</b><span>24MP / ナイトモードAuto</span><b>手動</b><span>触らなくてOK。メインで絞りを触るならƒ/1.48が暗所向き</span><b>コツ</b><span>両手で固定。壁・手すりに寄せる。街灯の白飛びは露出を下げる</span></div>
+        </div>
+
+        <div class="card scene span-6">
+          <div class="label">Sunset</div><h3>🌅 夕焼け・逆光</h3>
+          <div class="setting"><b>レンズ</b><span>1× / 太陽を大きく見せるなら4×</span><b>画質</b><span>24MP、十分明るければ48MP</span><b>手動</b><span>太陽付近をタップ → ☀︎を下へ。目安 -0.3〜-0.7</span><b>コツ</b><span>暗部を少し犠牲にして空の色を残す</span></div>
+        </div>
+
+        <div class="card scene span-6">
+          <div class="label">Motion</div><h3>🐎 動物・乗り物・歩く人</h3>
+          <div class="setting"><b>レンズ</b><span>1×〜4×。被写体との距離で選ぶ</span><b>画質</b><span>24MP</span><b>AF</b><span>被写体をタップ → 黄色枠をダブルタップで追尾</span><b>手動</b><span>ブレる時だけシャッター 1/250秒以上を目安</span></div>
+        </div>
+
+        <div class="card scene span-6">
+          <div class="label">Macro</div><h3>🌿 花・小物・料理の超接写</h3>
+          <div class="setting"><b>レンズ</b><span>近づくとマクロへ自動切替</span><b>画質</b><span>通常24MP。十分明るく細部を残したい時は48MPを検討</span><b>操作</b><span>🌷マークでマクロ切替を制御</span><b>コツ</b><span>近すぎて影を作らない。少し離れて光を入れる</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="manual" class="wrap">
+      <h2>手動操作は「困った時だけ」使う</h2>
+      <p>18 Proは絞り、シャッタースピード、ホワイトバランス、マニュアルフォーカス、ヒストグラムを標準カメラで扱える。でも、<b>Autoが失敗している理由が分かる時だけ触る</b>のがいちばん簡単。</p>
+      <div class="grid">
+        <div class="card span-6"><h3>露出 ☀︎</h3><p><b>最優先で覚える。</b>被写体をタップし、横の太陽マークを上下。</p><ul><li>空・ネオンが白い → 下げる</li><li>顔が暗い → 少し上げる</li><li>長押しでAE/AFロック</li></ul></div>
+        <div class="card span-6"><h3>絞り · Mainのみ可変</h3><p>ƒ/1.48 / 1.8 / 2.8 / 4.0。数字が小さいほど明るく、背景がぼけやすい。</p><ul><li>夜・主役1人 → ƒ/1.48〜1.8</li><li>料理・街 → ƒ/2.8</li><li>風景・複数人 → ƒ/4.0</li></ul></div>
+        <div class="card span-6"><h3>シャッタースピード</h3><p>被写体がブレる時に使う。</p><ul><li>歩く人：1/125秒〜</li><li>動物・子ども：1/250秒〜</li><li>速い乗り物：1/500秒〜</li></ul><p class="mini muted">速くするほど光が不足しやすい。暗所ではAuto推奨。</p></div>
+        <div class="card span-6"><h3>ホワイトバランス</h3><p>写真は基本Auto。動画で照明が変わるたび色がフラフラする時に固定すると有効。</p><p class="mini">昼光の目安は5600K。数値を上げると暖かく、下げると冷たく見える。</p></div>
+        <div class="card span-6"><h3>マニュアルフォーカス</h3><p>ガラス越し、暗所、小物など、AFが迷う時だけ。18 Proはピント面を輪郭表示できる。</p></div>
+        <div class="card span-6"><h3>ヒストグラム</h3><p>右端に山がべったり張り付く → 白飛びの可能性。夕焼けや雪景色など、明暗差が大きい時に確認。</p></div>
+      </div>
+
+      <details><summary>カメラコントロール、どう使えばいい？</summary>
+        <p><span class="key">クリック</span> カメラを開く / 撮影。<br>
+        <span class="key">軽くダブルプレス</span> コントロールを表示。<br>
+        <span class="key">スライド</span> ズームや露出などの値を変更。</p>
+        <p>最初は<b>ズームと露出</b>だけ使えれば十分。設定項目を増やしすぎない方が速い。</p>
+      </details>
+    </section>
+
+    <section id="video" class="wrap">
+      <h2>動画は4K30を基準にする</h2>
+      <div class="card">
+        <table>
+          <tr><th>シーン</th><th>おすすめ</th><th>使い分け</th></tr>
+          <tr><td>普通の旅行Vlog</td><td><b>4K / 30fps</b></td><td>基本はこれ。暗所にも比較的強く、容量も現実的。</td></tr>
+          <tr><td>歩く人・乗り物</td><td><b>4K / 60fps</b></td><td>動きを滑らかに。明るい日中向き。</td></tr>
+          <tr><td>走る・激しい歩き撮り</td><td><b>アクションモード</b></td><td>手ぶれを強く抑えたい時。</td></tr>
+          <tr><td>人物を映画っぽく</td><td><b>シネマティック 4K / 30fps</b></td><td>背景ぼけとフォーカス移動を活かす。</td></tr>
+          <tr><td>本気編集</td><td><b>ProRes / Log 2</b></td><td>色編集を前提にした作品用。普段はOFF。</td></tr>
+        </table>
+      </div>
+      <p class="note warn"><b>60fpsは万能ではない。</b>暗い場所では30fpsの方が光を取り込みやすい。夜市・室内・夕方はまず4K30。</p>
+    </section>
+
+    <section id="14to18" class="wrap">
+      <h2>iPhone 14から何が変わった？</h2>
+      <div class="card">
+        <table>
+          <tr><th></th><th>iPhone 14</th><th>iPhone 18 Pro</th></tr>
+          <tr><td>背面カメラ</td><td>12MPメイン + 12MP超広角</td><td><b>48MP Main / Ultra Wide / Telephoto</b></td></tr>
+          <tr><td>望遠</td><td>専用望遠なし、最大5×デジタル</td><td><b>4× 100mm望遠 + 8× 200mm光学品質</b>、最大40×デジタル</td></tr>
+          <tr><td>メインの絞り</td><td>固定 ƒ/1.5</td><td><b>ƒ/1.48 / 1.8 / 2.8 / 4.0 可変</b></td></tr>
+          <tr><td>手動コントロール</td><td>基本は自動中心</td><td><b>絞り・シャッター・WB・フォーカス・ヒストグラム</b></td></tr>
+          <tr><td>マクロ</td><td>専用マクロなし</td><td><b>48MPマクロ</b></td></tr>
+          <tr><td>動体</td><td>通常AF</td><td><b>スマートフォーカストラッキング</b></td></tr>
+          <tr><td>操作</td><td>画面・音量ボタン中心</td><td><b>カメラコントロール</b>を追加</td></tr>
+        </table>
+      </div>
+      <p class="note"><b>一番大きな違い：</b>「1枚を撮るために全部設定するカメラ」になったのではなく、<b>Autoのまま撮れる範囲が増え、必要な時だけプロ操作を足せる</b>ようになった。</p>
+    </section>
+
+    <section id="travel" class="wrap">
+      <h2>海外旅行での撮り方の型</h2>
+      <div class="grid">
+        <div class="card span-4"><div class="label">Step 1</div><h3>まず24MP・1×</h3><p>到着したら何も考えず記録。シャッターチャンスを逃さない。</p></div>
+        <div class="card span-4"><div class="label">Step 2</div><h3>同じ場所でもう1枚</h3><p>0.5×で広さ、4×でディテール。写真のバリエーションを作る。</p></div>
+        <div class="card span-4"><div class="label">Step 3</div><h3>特別な1枚だけ48MP</h3><p>昼の絶景・建築など、細部を残したい静止シーンに限定。</p></div>
+      </div>
+
+      <div class="card" style="margin-top:14px">
+        <h3>旅先での5秒チェック</h3>
+        <ol>
+          <li><b>レンズ汚れてない？</b> 夜景は特に指紋が大敵。</li>
+          <li><b>倍率は適切？</b> 迷ったら1×。人物は2×/4×。</li>
+          <li><b>水平？</b> 海・建物は水準器を見る。</li>
+          <li><b>明るすぎない？</b> 白飛びしていたら露出を少し下げる。</li>
+          <li><b>もう1カット撮った？</b> 広角 / 寄り / 縦動画のどれかを追加。</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>やりがちな失敗</h2>
+      <div class="grid">
+        <div class="card span-6"><h3>全部48MPにする</h3><p>容量・処理・撮影テンポが重くなる。<b>普段24MP、特別な静止画48MP</b>で十分。</p></div>
+        <div class="card span-6"><h3>暗いのに8×を使う</h3><p>望遠は光が必要。夜は1×で撮って後から切り取る方が良い場合が多い。</p></div>
+        <div class="card span-6"><h3>0.5×で人物を端に置く</h3><p>顔や体が伸びやすい。超広角は景色のために使い、人物は中心寄りへ。</p></div>
+        <div class="card span-6"><h3>ProRes / RAWを常時ON</h3><p>「Pro」という名前に釣られない。編集の自由度が必要な時だけ使う。</p></div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>公式情報</h2>
+      <div class="card mini">
+        <p>仕様・操作の根拠はApple公式情報を優先。iOSの更新でUIや挙動が変わる場合があります。</p>
+        <ul>
+          <li><a href="https://www.apple.com/jp/iphone-18-pro/specs/" target="_blank" rel="noopener">iPhone 18 Pro 技術仕様</a></li>
+          <li><a href="https://support.apple.com/guide/iphone/use-advanced-camera-tools-ipht182e41vsz41/ios" target="_blank" rel="noopener">高度なカメラツール</a></li>
+          <li><a href="https://support.apple.com/guide/iphone/use-camera-tools-iph3dc593597/ios" target="_blank" rel="noopener">カメラツール・フォーカス・露出・追尾</a></li>
+          <li><a href="https://support.apple.com/guide/iphone/customize-the-main-camera-lens-iph72395b28f/ios" target="_blank" rel="noopener">24 / 28 / 35mm のカスタマイズ</a></li>
+          <li><a href="https://support.apple.com/ja-jp/111850" target="_blank" rel="noopener">iPhone 14 技術仕様</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">Updated 2026-09-20 · iPhone 18 Pro / iOS 27 · Travel-first field guide</footer>
+</body>
+</html>
